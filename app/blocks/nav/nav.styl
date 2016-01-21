@@ -1,0 +1,124 @@
+.nav
+	width em(470)
+	height em(679)
+	background-color #f0d2b0
+	position absolute
+	top 43px
+	left 27px
+	z-index 5
+	padding-top em(103)
+	overflow hidden
+	transition all .25s
+
+	+below(1000px)
+		font-size rem(13)
+
+	+below(700px)
+		font-size rem(11)
+
+	+below(400px)
+		font-size rem(9)
+
+	&_hidden
+		visibility hidden
+		height 0
+		width 0
+		font-size rem(5)
+
+	&__button-container
+		position absolute
+		top 0px
+		left 2px
+		width 62px
+		height 48px
+		border 1px solid $frame-gray
+		z-index 15
+
+	&__nav-link
+		display block
+		overflow hidden
+		position relative
+		width 100%
+		height 100%
+
+	&__nav-icon
+		svgSize $play
+		position absolute
+		top 11px
+		left 18px
+
+	&__play-icon-path
+		fill none
+		stroke #797979
+		stroke-width 1px
+		fill-rule evenodd
+
+	&__line
+		position absolute
+		padding-top 13px
+		padding-bottom 10px
+		z-index 20
+		width calc(100% - 56px)
+		right 0
+		top 0
+		transition width 1.2s
+
+		&::before
+			content ''
+			display block
+			height 12px
+			background-color #f0d2b0
+			border-bottom 1px solid $frame-gray
+
+		&::after
+			content ''
+			display block
+			height 12px
+			background-color #f0d2b0
+
+	&__list
+		margin-left em(46)
+		margin-right em(54)
+
+		+below(1000px)
+			margin-right em(46)
+
+	&__link
+		display block
+		text-decoration none
+		color $frame-gray
+		font-family $opensans
+		font-size em(30)
+		font-weight 300
+		text-transform uppercase
+		letter-spacing 4.5px
+		padding-y em(16, 30)
+		padding-left em(17, 30)
+
+		+below(700px)
+			letter-spacing 1.5px
+
+		&_active
+		&:hover
+			background-image url('../images/bg_menu-hover.jpg')
+			background-repeat no-repeat
+			background-position center
+			background-size cover
+			color #fff
+			font-weight 400
+
+		&_active
+			cursor default
+
+@keyframes l7
+	0%
+		width: 0
+
+	100%
+		width: calc(100% - 56px)
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+include ../collection/collection
+include ../musthave/musthave
+include ../wanted/wanted
+include ../sale/sale
+include ../art/art
+
+mixin index()
+	+b('main').index
+		+collection()
+		+musthave()
+		+wanted()
+		+sale()
+		+art()
+

@@ -1,0 +1,15 @@
+include ../icon/icon
+
+mixin social()
+	+b.social&attributes(attributes)
+		+e('p').call Follow us
+		+e('p').hash #[span #]Philosophy
+		+e.list
+			+e('a').link(href='#{jv0}' title='Social link')
+				+icon('linkedin')(class='social__icon social__icon_linkedin')
+			+e('a').link(href='#{jv0}' title='Social link')
+				+icon('pinterest')(class='social__icon social__icon_pinterest')
+			+e('a').link(href='#{jv0}' title='Social link')
+				+icon('facebook')(class='social__icon social__icon_facebook')
+			+e('a').link(href='#{jv0}' title='Social link')
+				+icon('twitter')(class='social__icon social__icon_twitter')

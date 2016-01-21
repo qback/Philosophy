@@ -1,0 +1,115 @@
+.musthave
+	clerfix()
+	width 100%
+	height 0
+	padding-bottom prc(473/1200)
+	overflow hidden
+	position relative
+	min-height 400px
+
+	+below(600px)
+		padding-bottom prc(946/1200)
+		min-height 800px
+
+	&__column
+		position absolute
+		width 50%
+		height 100%
+		background-repeat no-repeat
+		background-size cover
+		background-position 50% 50%
+		z-index -5
+
+		+below(600px)
+			height 50%
+			width 100%
+
+		&_left
+			background-image url('../images/bg_light.jpg')
+
+		&_right
+			left 50%
+			background-image url('../images/bg_glass.jpg')
+
+			+below(600px)
+				left 0
+				top 50%
+
+	&__letters
+		position absolute
+		top em(5)
+		right em(31)
+		clearfix()
+
+		+between(600px, 850px)
+			top em(5)
+			right em(5)
+			font-size rem(12)
+
+		+below(450px)
+			top em(10)
+			right em(10)
+			font-size rem(13)
+
+
+	&__letters-column
+		float left
+		color #ebeff2
+		font-family $opensans
+		font-size em(30)
+		font-weight 700
+		line-height 40px
+		text-transform uppercase
+		width em(35, 30)
+		word-wrap break-word
+		letter-spacing 10px
+
+		+below(1000px)
+			line-height (40/30)
+
+		&_right
+			& span:first-child
+				margin-left em(-2, 30)
+
+	&__link
+		text-decoration none
+		margin-left prc(798/1200)
+		margin-top prc(312/1200)
+		display block
+		width em(240)
+
+		+below(1150px)
+			margin-left prc(720/1150)
+
+		+below(900px)
+			margin-top 260px
+			margin-left prc(520/900)
+
+		+below(750px)
+			font-size rem(15)
+
+		+below(600px)
+			position absolute
+			right 15px
+			margin-left 0
+
+	&__title
+		color #839da5
+		font-family $farray
+		font-size em(36)
+		font-weight 400
+		text-transform uppercase
+		word-spacing em(7, 36)
+		margin-bottom em(21, 36)
+
+		& span
+			letter-spacing em(3, 36)
+
+	&__desc
+		color #797979
+		font-family $opensans
+		font-size em(14)
+		font-weight 400
+		line-height (22/14)
+		letter-spacing .4px
+

@@ -1,0 +1,174 @@
+.collection
+	padding-y em(51)
+	position relative
+	background-color #fff
+	clearfix()
+
+	+below(750px)
+		font-size rem(14)
+		padding-y em(40)
+
+	&__inner
+		position relative
+		margin-left prc(187/1200)
+		width prc(1013/1200)
+		border 2px solid #a0b3b9
+		border-right none
+		min-height em(586)
+
+		+below(1000px)
+			width prc(950/1000)
+			margin-left prc(50/1000)
+
+		+below(650px)
+			width 97.5%
+			margin-left 2.5%
+
+	&__text
+		float right
+		width em(324)
+		padding-top em(150)
+		margin-right em(70)
+		margin-left em(10)
+
+		+below(900px)
+			margin-right em(20)
+
+		+below(650px)
+			float none
+			width 80%
+			padding-top 0
+			margin-top em(370)
+			margin-left 20%
+			padding-x 4%
+			padding-bottom em(20)
+
+		+below(450px)
+			width 100%
+			margin-left 0
+			text-align center
+
+	&__title
+		color #f0d2b0
+		font-family $farray
+		font-size em(36)
+		font-weight 400
+		letter-spacing 2.5px
+		margin-bottom em(21, 36)
+
+		+below(450px)
+			font-size em(34)
+
+	&__desc
+		color $frame-gray
+		font-family $opensans
+		font-size em(14)
+		font-weight 300
+		line-height (22/14)
+		margin-right em(15, 14)
+		letter-spacing .7px
+		margin-bottom em(37, 14)
+
+		+below(650px)
+			margin-bottom em(20, 14)
+
+	&__link
+		display inline-block
+		text-decoration none
+		border 2px solid #a0b3b9
+		overflow hidden
+
+		+below(500px)
+			font-size rem(14)
+
+		& span:first-child
+			padding-y em(19, 18)
+			padding-x em(29, 18)
+			text-transform uppercase
+			font-family $opensans
+			color #a0b3b9
+			width 100%
+			height 100%
+			float left
+			font-size em(18)
+			font-weight 400
+			letter-spacing .18px
+			transition color .3s ease
+
+		& span:last-child
+			display block
+			width 0
+			height em(56)
+			background-color #f0d2b0
+			transition width .3s ease
+
+		&:hover
+			span:first-child
+				color #fff
+
+			& span:last-child
+				width 100%
+
+	&__promo
+		width prc(617/1013)
+		height em(519)
+		background-image url('../images/bg_kiss.jpg')
+		background-repeat no-repeat
+		background-size cover
+		background-position 30% 50%
+		background-origin content-box
+		position relative
+		left em(-97)
+		top em(32)
+		border em(20) solid #fff
+		border-right none
+
+		+below(650px)
+			position absolute
+			width 90%
+			top em(20)
+			left -5%
+			height em(350)
+			border-left none
+			background-position 30% 20%
+
+	&__letters
+		position absolute
+		top em(30)
+		left em(-68)
+		clearfix()
+
+		+below(1000px)
+			top em(15)
+			right em(15)
+			left auto
+
+		+below(500px)
+			font-size rem(12)
+
+
+
+	&__letters-column
+		float left
+		color #d1cfcf
+		font-family $opensans
+		font-size em(30)
+		font-weight 700
+		line-height (40/30)
+		text-transform uppercase
+		width em(31, 30)
+		word-wrap break-word
+		letter-spacing 10px
+
+		+below(1000px)
+			color #fff
+
+		&_right
+
+			& span:first-child
+				margin-left em(-2, 30)
+
+			& span:last-child
+				margin-left em(6, 30)
+
+

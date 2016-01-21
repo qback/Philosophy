@@ -1,0 +1,64 @@
+.social
+	text-align center
+	display inline-block
+	margin-left em(5)
+
+	&__call
+		color #707070
+		font-family $opensans
+		font-size em(24)
+		font-weight 300
+		text-transform uppercase
+		margin-bottom em(13, 24)
+
+	&__hash
+		color #707070
+		font-size em(30)
+		text-transform uppercase
+		font-family $farray
+		font-weight 400
+		margin-bottom em(24, 30)
+
+		& span
+			font-family $opensans
+			font-weight 700
+
+	&__link
+		display inline-block
+		width em(41)
+		height em(41)
+		border-radius 50%
+		background-color #fff
+		border 1px solid #707070
+		margin-right em(6)
+		position relative
+		transition background-color .3s
+
+		&:hover
+			background-color #ed1c24
+
+			& .social__icon
+				fill #fff
+
+	&__icon
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		margin 0 auto
+		fill #839da5
+		transition fill .3s
+
+		&_linkedin
+			width em(24)
+			height em(22)
+		&_pinterest
+			width em(23)
+			height em(29)
+		&_facebook
+			width em(15)
+			height em(27)
+		&_twitter
+			width em(28)
+			height em(22)
+

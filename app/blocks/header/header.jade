@@ -1,0 +1,29 @@
+
+
+mixin header()
+	+b('header').header&attributes(attributes)
+		svg(xmlns='http://www.w3.org/2000/svg', style='display:none')
+			symbol#icon_arrow(viewbox='0 0 35 24')
+				path.header__arrow-icon-path(d='M186.5,777L169,753H204Z', transform='translate(-169 -753)')
+		+e.button
+			+e('a').nav-link(id='toggleNav' href='#')
+				span
+		+e.intro
+			+e('h1').title Philosophy
+			+e('p').subtitle
+				| New season fashion is here so we bet you’ve been busy browsing your
+				| favourite mags and blogs for style inspiration. Our new and improved
+				| yourself confidence. In The Press category, powered by Endource.
+			+e('span').line_l1
+			+e('span').line_l2
+			+e('span').line_l3
+			+e('span').blur
+			+e('svg').arrow-icon
+				use(xlink:href='#icon_arrow')
+
+
+
+
+
+
+

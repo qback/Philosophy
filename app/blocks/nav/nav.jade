@@ -1,0 +1,23 @@
+
+
+mixin nav()
+	+b('nav').nav.nav_hidden&attributes(attributes)
+		svg(xmlns='http://www.w3.org/2000/svg', style='display:none')
+			symbol#icon_play(viewbox='0 0 26 26')
+				path#path.nav__play-icon-path(d='M79.007,47.5L53.992,60V35Z', transform='translate(-53.5 -34.5)')
+		+e.button-container
+			+e('a').nav-link(href='#' id='toggleNavReverse')
+				+e('svg').nav-icon
+					use(xlink:href='#icon_play')
+		+e.line
+		+e('ul').list
+			+e('li').item: +e('a').link(href='#{jv0}' title='Nav link') Basics
+			+e('li').item: +e('a').link(href='#{jv0}' title='Nav link') Blouses &amp; Shirts
+			+e('li').item: +e('a').link(href='#{jv0}' title='Nav link') T-shorts &amp; Tops
+			+e('li').item: +e('a').link(href='#{jv0}' title='Nav link') Jacket
+			+e('li').item: +e('a').link(href='#{jv0}' title='Nav link') Trousers &amp; Jeans
+			+e('li').item: +e('a').link(href='#{jv0}' title='Nav link') Dresses
+			+e('li').item: +e('a').link(href='#{jv0}' title='Nav link') Sweatshirts
+			+e('li').item: +e('a').link(href='#{jv0}' title='Nav link') Coats &amp; Parkas
+
+

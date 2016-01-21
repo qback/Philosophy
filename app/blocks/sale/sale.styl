@@ -1,0 +1,190 @@
+.sale
+	background-image url('../images/bg_yacht.jpg')
+	background-repeat no-repeat
+	background-position left 50%
+	background-size cover
+	position relative
+	padding-top em(35)
+	padding-bottom em(37)
+
+	+below(1200px)
+		padding-top em(70)
+
+	+between(600px, 800px)
+		font-size rem(13)
+		margin-bottom em(20, 13)
+
+	+below(600px)
+		font-size rem(15)
+		margin-bottom em(15, 15)
+
+	+below(500px)
+		font-size rem(14)
+
+	+below(400px)
+		font-size rem(13)
+
+	&__wrapper
+		max-width em(978)
+		margin 0 auto
+
+		+below(500px)
+			padding-x 4%
+
+	&__column
+		width prc(447/978)
+		display inline-block
+		vertical-align top
+		position relative
+		margin-right prc(76/978)
+
+		+below(1200px)
+			width 46%
+			margin-right calc(2% - 4px)
+			margin-left 2%
+
+		&_right
+			margin-right 0
+
+
+		+below(600px)
+			width 80%
+			max-width 447px
+			display block
+			margin 0 auto
+			margin-bottom em(20)
+
+		+below(500px)
+			width 100%
+
+	&__expo
+		width 100%
+		position absolute
+		top em(24)
+		height em(298)
+		background-image url('../images/bg_smile.jpg')
+		background-repeat no-repeat
+		background-size cover
+		background-position 50% 50%
+		z-index 5
+
+		&_right
+			background-image url('../images/bg_pillows.jpg')
+
+	&__price
+		display inline-block
+		color #fff
+		font-family $opensans
+		font-size em(48)
+		font-weight 600
+		text-decoration none
+		text-transform uppercase
+		text-align right
+		margin-top em(228, 48)
+		margin-left prc(191/447)
+		border-bottom 2px solid transparent
+		transition border-color .3s, .3s margin-left .1s
+
+		&:hover
+			border-bottom 2px solid #fff
+			margin-left prc(189/447)
+
+	&__frame
+		min-height em(477)
+		width em(288)
+		border 2px solid #868888
+		margin 0 auto
+		text-align center
+		overflow hidden
+
+		&:hover
+			& .sale__text
+				top em(200)
+
+			& .sale__article-link
+				top em(141, 18)
+
+	&__text
+		padding-x em(11)
+		color #302824
+		font-family $opensans
+		font-weight 400
+		text-align center
+		position relative
+		top em(68)
+		transition top .2s
+
+	&__article-title
+		font-size em(22)
+		text-transform uppercase
+		letter-spacing -.3px
+		margin-bottom em(12, 22)
+		line-height (22/22)
+
+	&__article-subtitle
+		line-height (19/14)
+		font-size em(14)
+		letter-spacing .4px
+		margin-bottom em(7, 14)
+
+	&__article-link
+		display inline-block
+		padding-y em(19, 18)
+		padding-x em(40, 18)
+		text-decoration none
+		border 2px solid #868888
+		color #868888
+		text-transform uppercase
+		font-family $opensans
+		font-size em(18)
+		font-weight 400
+		letter-spacing .18px
+		overflow hidden
+		text-align center
+		margin-top em(228, 18)
+		position relative
+		width em(215, 18)
+		top em(20, 18)
+		transition top .2s
+
+		&:active
+			border 2px solid #a0b3b9
+			color #a0b3b9
+
+	&__letters
+		position absolute
+		clearfix()
+		top em(49)
+		right em(46)
+
+		+between(600px, 1200px)
+			top 5px
+			right auto
+			left 50%
+			transform translateX(-50%)
+
+		+below(600px)
+			top em(10)
+			right em(10)
+			font-size rem(14)
+
+		+below(500px)
+			font-size rem(13)
+
+		+below(350px)
+			top em(3)
+			right em(3)
+
+	&__letters-column
+		float left
+		color #fffeff
+		font-family $opensans
+		font-size em(30)
+		font-weight 700
+		line-height 40px
+		text-transform uppercase
+		width em(24, 30)
+		word-wrap break-word
+
+		+below(1000px)
+			line-height (40/30)

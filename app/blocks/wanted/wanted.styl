@@ -1,0 +1,301 @@
+.wanted
+	padding-top em(51)
+	padding-bottom em(23)
+	background-color #f8f8f8
+	position relative
+
+	+below(650px)
+		font-size rem(15)
+
+	+below(600px)
+		font-size rem(14)
+		padding-bottom 0
+
+	&__wrapper
+		margin 0 auto
+		width 974px
+		text-align center
+
+		+below(974px)
+			padding-left 50px
+			width 96%
+
+	&__column
+		width em(222)
+		margin-right prc(23/974)
+		display inline-block
+		vertical-align top
+		position relative
+		overflow hidden
+
+		&_second
+			margin-right prc(27/974)
+
+		&_third
+			width em(220)
+			margin-right prc(22/974)
+
+		&:last-child
+			margin-right 0
+
+			+below(550px)
+				margin 0 auto
+
+		+below(974px)
+			width 40%
+			min-width em(220, 14)
+
+		+below(550px)
+			width 70%
+			min-width em(240, 14)
+			display block
+			margin 0 auto
+
+	&__product
+		width 100%
+		display inline-block
+		height em(356)
+		vertical-align top
+		margin-bottom 23px
+		position relative
+		opacity 1
+		transition all .5s
+
+		+below(974px)
+			margin-bottom 15px
+
+		+below(550px)
+			margin-bottom 10px
+			overflow hidden
+
+		&:hover
+			&::before
+			&::after
+			& > .wanted__image
+			& > .wanted__frame
+				opacity 0
+
+			& .wanted__product_hover
+			& .wanted__image_hover
+			& .wanted__frame_hover
+			& .wanted__product_hover::before
+			& .wanted__product_hover::after
+				transition all .5s
+				opacity 1
+
+			& + .wanted__link
+				color #fff
+				background-color #f0d2b0
+
+		&_bag
+			&::before
+			&::after
+				content ''
+				position absolute
+				width 2px
+				background-color #839da5
+				right 0
+
+			&::before
+				top 0
+				height em(65)
+
+			&::after
+				bottom 0
+				height em(189)
+
+		&_jacket
+			&::before
+			&::after
+				content ''
+				position absolute
+				width 2px
+				background-color #839da5
+				right 0
+
+			&::before
+				top 0
+				height em(70)
+
+			&::after
+				bottom 0
+				height em(105)
+
+		&_shirt
+			&::before
+			&::after
+				content ''
+				position absolute
+				height 2px
+				background-color #839da5
+				width em(22)
+				top em(127)
+
+			&::before
+				left 0
+
+			&::after
+				right 0
+
+		&_jeans
+			&::before
+			&::after
+				content ''
+				position absolute
+				height 2px
+				background-color #839da5
+				top em(231)
+				width em(33)
+			&::before
+				left 0
+
+			&::after
+				right 0
+
+		&_hover
+			position absolute
+			width 100%
+			height 100%
+			top 0
+			left 0
+			opacity 0
+
+			&::before
+			&::after
+				content ''
+				position absolute
+				height 2px
+				background-color #839da5
+				width em(24)
+				bottom 0
+
+			&::before
+				left 0
+
+			&::after
+				right 0
+
+	&__frame
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+		border 2px solid #839da5
+
+		&_bag
+			border-right none
+
+		&_shirt
+			height em(229)
+			top auto
+			bottom 0
+			border-top none
+
+		&_jacket
+			border-right none
+
+		&_jeans
+			border-bottom none
+			height em(233)
+
+		&_hover
+			border-bottom none
+
+	&__image
+		display block
+		margin 0 auto
+		max-width 100%
+		height auto
+		background-color #f8f8f8
+
+		+below(974px)
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+
+		&_bag
+			margin-top em(67)
+
+		&_shirt
+			margin-top em(48)
+			margin-left em(33)
+
+		&_jacket
+			margin-top em(35)
+			margin-left em(7)
+
+		&_jeans
+			margin-top em(31)
+			margin-left em(57)
+
+		&_hover
+			margin-top em(12)
+
+		&_full
+			margin-top 0
+
+		+below(974px)
+			margin 0 0
+
+	&__link
+		display inline-block
+		padding-y em(19, 18)
+		text-decoration none
+		width 100%
+		color #a0b3b9
+		text-transform uppercase
+		font-family $opensans
+		font-size em(18)
+		font-weight 400
+		letter-spacing 2.3px
+		position relative
+		overflow hidden
+		text-align center
+		background-color transparent
+		transition background-color .1s
+		margin-bottom 30px
+
+		+below(500px)
+			margin-bottom 20px
+
+		&:hover
+			color #fff
+			background-color #f0d2b0
+
+	&__letters
+		position absolute
+		top 82px
+		left 40px
+		clearfix()
+
+		+between(974px, 1200px)
+			display none
+
+		+below(974px)
+			top em(10)
+			left em(10)
+			font-size rem(14)
+
+		+below(600px)
+			top em(10)
+			left em(10)
+			font-size rem(13)
+
+	&__letters-column
+		float left
+		color #c5c2c3
+		font-family $opensans
+		font-size em(30)
+		font-weight 700
+		line-height 40px
+		text-transform uppercase
+		width em(35, 30)
+		word-wrap break-word
+		letter-spacing 10px
+
+		+below(1000px)
+			line-height (40/30)
+
+

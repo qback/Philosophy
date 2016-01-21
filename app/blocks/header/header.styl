@@ -1,0 +1,294 @@
+.header
+	background-image url('../images/bg_hero.jpg')
+	background-repeat no-repeat
+	background-position right center
+	background-size cover
+	min-height em(816)
+	position relative
+	padding-left em(111)
+	padding-top em(273)
+	transition filter .5s
+
+	&_blur
+		filter blur(3px)
+
+	&::before
+		content ''
+		width 100%
+		height 100%
+		position absolute
+		top 0
+		left 0
+
+	+below(1150px)
+		padding-left em(60)
+		padding-top em(340)
+
+	+below(1000px)
+		padding-top em(370)
+
+	+below(900px)
+		min-height em(700)
+
+	+below(700px)
+		min-height em(600)
+		padding 0
+
+	.header__arrow-icon-path
+		+below(1150px)
+			fill alpha(#fff, .5)
+			stroke #797979
+			stroke-width 2px
+			fill-rule evenodd
+
+	&__intro
+		width prc(666/1089)
+		padding-bottom prc(155/1089)
+		padding-top prc(140/1089)
+		padding-x prc(53/1089)
+		position relative
+		background-clip padding-box
+
+		+below(1150px)
+			background-color alpha(#fff, .4)
+
+		+below(900px)
+			padding-y em(70)
+			padding-x em(30)
+			width em(580)
+			background-color alpha(#fff, .75)
+
+		+below(700px)
+			position absolute
+			bottom 0
+			left 50%
+			transform translateX(-50%)
+			padding-y em(40)
+			bottom 30px
+			width prc(550/700)
+
+		+below(550px)
+			padding-y em(40)
+			width 95%
+			font-size rem(15)
+			text-align center
+			padding-x em(15)
+
+		&::before
+		&::after
+			content ''
+			position absolute
+			background transparent
+			width 0px
+			bottom 0
+			height 2px
+			animation-iteration-count 1
+			animation-timing-function ease-in-out
+			animation-fill-mode forwards
+
+		&::before
+			right 0
+			animation-name l4
+			animation-delay 1.3s
+			animation-duration .3s
+
+		&::after
+			right: 95%
+			animation-name l5
+			animation-delay 0s
+			animation-duration .1s
+
+	&__line
+		position absolute
+		background transparent
+		width 0px
+		height 0px
+		animation-duration .4s
+		animation-iteration-count 1
+		animation-timing-function ease-in-out
+		animation-fill-mode forwards
+
+		&_l1
+			left 0
+			bottom 0
+			width 2px
+			animation-name l1
+			animation-delay .1s
+
+		&_l2
+			top 0
+			left 0
+			height 2px
+			animation-name l2
+			animation-delay .5s
+
+		&_l3
+			right 0
+			top 0
+			width 2px
+			animation-name l3
+			animation-delay .9s
+
+	&__arrow-icon
+		position absolute
+		svgSize $arrow
+		left 8.5%
+		fill $frame-gray
+		bottom -50px
+
+		+above(1150px)
+			opacity 0
+			animation-name l6
+			animation-delay 1.6s
+			animation-duration .4s
+			animation-iteration-count 1
+			animation-timing-function ease-in-out
+			animation-fill-mode forwards
+
+		+below(1150px)
+			bottom -24px
+			fill #fff
+			height 26px
+
+		+below(700px)
+			width 30px
+
+		+below(600px)
+			width 25px
+			bottom -20px
+
+		+below(400px)
+			width 23px
+
+	&__title
+		color #565656
+		font-family $farray
+		font-size em(72)
+		font-weight 400
+		line-height 1
+		text-transform uppercase
+		margin-bottom em(21, 72)
+		letter-spacing 1.5px
+
+		+between(1050px, 1200px)
+			font-size em(68)
+
+		+between(950px, 1050px)
+			font-size em(64)
+
+		+between(700px, 950px)
+			font-size em(60)
+
+		+between(450px, 700px)
+			font-size em(50)
+
+		+between(400px, 450px)
+			font-size em(46)
+
+		+below(400px)
+			font-size em(36)
+
+	&__subtitle
+		color #565656
+		font-family $opensans
+		font-size em(14)
+		font-weight 400
+		line-height (22/14)
+		padding-left 4px
+		padding-right 20px
+		letter-spacing .47px
+
+		+below(1000px)
+			padding-right 0
+
+	&__button
+		position absolute
+		top 43px
+		left 29px
+		width 62px
+		height 48px
+		border 1px solid #f0d2b0
+		// display none
+
+	&__nav-link
+		display block
+		overflow hidden
+		position relative
+		width 100%
+		height 100%
+
+		&::before
+		&::after
+			content ''
+
+		&::before
+		&::after
+		& span
+			height 2px
+			width 40px
+			background-color $frame-gray
+			display block
+			margin 0 auto
+			position relative
+			transition all .4s
+
+		& span
+			top 10px
+
+		&::before
+			top 22px
+
+		&::after
+			top 28px
+
+@keyframes l1
+	0%
+		height: 0
+		background: $frame-gray
+	100%
+		height: 100%
+		background: $frame-gray
+
+@keyframes l2
+	0%
+		width: 0
+		background: $frame-gray
+	100%
+		width: 100%
+		background: $frame-gray
+
+@keyframes l3
+	0%
+		height: 0
+		background: $frame-gray
+	100%
+		height: 100%
+		background: $frame-gray
+
+@keyframes l4
+	0%
+		width: 0
+		background: $frame-gray
+	100%
+		width: 81.5%
+		background: $frame-gray
+
+@keyframes l5
+	0%
+		width: 0
+		background: $frame-gray
+	100%
+		width: 5%
+		background: $frame-gray
+
+@keyframes l6
+	0%
+		opacity: 0
+		bottom: 0
+	100%
+		opacity: 1
+		bottom: -50px
+
+
+
+

@@ -1,0 +1,208 @@
+.art
+	padding-top em(49)
+	padding-bottom em(20)
+	background-color #fff
+
+	+between(650px, 800px)
+		font-size rem(13)
+
+	+between(500px, 650px)
+		font-size rem(10)
+
+	+between(400px, 450px)
+		font-size rem(14)
+
+	+below(400px)
+		font-size rem(13)
+
+	&__wrapper
+		padding-x em(19)
+		text-align center
+
+		+below(500px)
+			padding-x 4%
+
+		+below(400px)
+			padding-x 2%
+
+	&__column
+		display inline-block
+		vertical-align top
+		background-repeat no-repeat
+		background-position 0% 50%
+		margin-right em(14)
+		position relative
+		background-size contain
+
+		+between(500px, 1200px)
+			display block
+			margin 0 auto
+
+		+below(500px)
+			margin-right 0
+			margin-bottom em(20)
+
+		&_first
+			width em(373)
+			height em(286)
+			background-image url('../images/bg_woolenart.jpg')
+
+			+between(500px, 1200px)
+				width em(373) * 2
+
+		&_second
+			width em(377)
+			height em(287)
+			background-image url('../images/bg_sweetfash.jpg')
+
+			+between(500px, 1200px)
+				width em(377) * 2
+
+		&_third
+			width em(373)
+			height em(286)
+			margin-right 0
+			background-image url('../images/bg_jewelaura.jpg')
+
+			+between(500px, 1200px)
+				width em(373) * 2
+				margin-right auto
+
+		&:hover
+		&:focus
+		&:active
+			.art__info
+				opacity 1
+
+	&__info
+		position relative
+		width em(271)
+		height em(249)
+		margin-top em(18)
+		margin-x auto
+		overflow hidden
+		background-repeat no-repeat
+		background-position 50% 50%
+		border 2px solid #fff
+		border-left none
+		transition opacity .3s
+
+		+above(1200px)
+			opacity 0
+
+		+below(500px)
+			opacity 0
+
+		+between(500px, 1200px)
+			width 50%
+			height 100%
+			left 25%
+			border-color #868888
+
+		+between(500px, 650px)
+				font-size rem(13)
+
+
+		&::before
+		&::after
+			content ''
+			position absolute
+			width 2px
+			background-color #fff
+			left 0
+
+			+between(500px, 1200px)
+				display none
+
+		&:before
+			top 0
+			height em(19)
+
+		&:after
+			bottom 0
+			height em(196)
+
+		&_first
+			background-image url('../images/bg_woolenart_blur.jpg')
+
+			+between(500px, 1200px)
+				background none
+
+		&_second
+			background-image url('../images/bg_sweetfash_blur.jpg')
+
+			+between(500px, 1200px)
+				background none
+
+		&_third
+			background-image url('../images/bg_jewelaura_blur.jpg')
+
+			+between(500px, 1200px)
+				background none
+
+	&__link
+		text-decoration none
+
+	&__title
+		color #fff
+		font-family $farray
+		font-size em(30)
+		font-weight 400
+		text-transform uppercase
+		padding-left em(38, 30)
+		margin-top em(17, 30)
+		letter-spacing em(2, 30)
+		margin-bottom em(12, 30)
+		text-align left
+
+		+between(500px, 1200px)
+			color #292929
+			text-align center
+			padding-x 0
+			margin-top em(30)
+
+		&_second
+			padding-left em(32, 30)
+
+		&_third
+			padding-left em(39, 30)
+
+		&::before
+			content ''
+			position absolute
+			width em(16, 30)
+			height em(16, 30)
+			background-image url('../images/icon_arrow.png')
+			background-position center
+			background-repeat no-repeat
+			background-size 100%
+			left 0
+			top em(26, 30)
+
+			+between(500px, 1200px)
+				display none
+
+	&__subtitle
+		color #292929
+		font-family $opensans
+		font-size em(14)
+		font-weight 400
+		line-height (22/14)
+		padding-left em(38, 14)
+		padding-right em(20)
+		letter-spacing em(.6, 14)
+		text-align left
+
+		+between(500px, 1200px)
+			text-align center
+			padding-x em(20, 14)
+
+		&_second
+			padding-left em(35, 14)
+
+		&_third
+			padding-left em(41, 14)
+			letter-spacing em(.8, 14)
+
+
+
